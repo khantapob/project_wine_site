@@ -63,10 +63,11 @@
                 <div id="plot2"></div>
                 <script src="static/js/sentiment_plot.js"></script>
                 <script src="static/js/sentiment.js"></script>
+                <script src="static/js/yearaverages.js"></script>
+                <script src="static/js/useraverages.js"></script>
                 <br>
                 
                 <p> The taster sentiment analysis on rating shows that a higher rating tends to get a more positive review description. 
-                  The analyzer was used on each description of the wine and compound score retrieved from data. It is 
                   
                 </p>
               </div>
@@ -84,7 +85,8 @@
                 <script src="static/js/sentiment.js"></script>
                 <script src="static/js/sentiment_plot.js"></script>
                 <br>
-                <p> The taster sentiment analysis on price does not show much of a correlation between higher prices and positive review description 
+                <p> The taster sentiment analysis on price does show that higher prices tend to get a more positive review.
+                    Wines in the affordable range have mixed sentiment analysis and do not necessarily show a correlation.
                     </p>
             
             </div>
@@ -105,7 +107,7 @@
                   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
                   <br>
                   
-                  <p> This analysis was to determine taster bias for price or rating. Shows that some users were 
+                  <p> This analysis was to determine taster bias for price or rating. Shows that some users do tend to review more expensive wines
                   
                   </p>
                 </div>
@@ -125,13 +127,58 @@
                   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
                   <script src="static/js/sentiment_plot.js"></script>
                   <br>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  <p>This analysis was to determine taster bias for price or rating. Shows the comparison with the average price of wines each user 
+                      reviews and what they tend to score. Some users tend to give a low rating.
                       </p>
               </div> 
+        </div>
+      </div>
+      div class="col-md-12">
+  
+            <div class="panel panel-default">
+                <div class="panel-body">
+                  <h2>Year Bias</h2>
+                  <hr>
+                  <div id="plot7"></div>
+                  <script src="static/js/tasteryearanalysis.js"></script>
+                  <br>
+                  
+                  <p> This analysis was to determine if wine reviewed/produced in a particular year was more favorable than other years.
+                    Based on average analysis, there was a decline in 2008 and user reviews started picking back up in 2012
+                  
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-12">
+  
+                  <div class="panel panel-default">
+                      <div class="panel-body">
+                        <h2>Year Bias</h2>
+                        <hr>
+                        <div id="plot9"></div>
+                        <script src="static/js/tasteryearanalysis.js"></script>
+                        <br>
+                        
+                        <p> This analysis was to determine if wine reviewed/produced in a particular year was more favorable than other years.
+                          Over the years, the average rating has stayed relatively consistent.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+  
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                              <h2>Year Bias</h2>
+                              <hr>
+                              <div id="plot8"></div>
+                              <script src="static/js/tasteryearanalysis.js"></script>
+                              <br>
+                              
+                              <p> This analysis was to determine if wine reviewed/produced in a particular year was more favorable than other years.
+                                Over the years, the average price reviewed has declined
+                              </p>
+                            </div>
+                          </div>
         </div>
       </div>
     <div class="col-md-1"></div>
