@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Wine Analysis</title>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <script src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
+ <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body style="background-color: rgb(102, 22, 22)">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <a class="navbar-brand" href="index.html" style="color: white; background-color:rgb(102, 22, 22)">
+            <i class="glyphicon glyphicon-home"></i>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="plot.html">Price by Country</a></li>
+          <li><a href="plot2.html">Price vs Rating</a></li>
+        </ul>
+      </li>
+      <li><a href="taster.html">Taster Analysis</a></li>
+      <li><a href="wineproduction.html">Wine Production</a></li>
+      <li><a href="data.html">Data</a></li>
+      
+    </ul>
+
+</div>
+</div>
+</nav>
+  <div class="container-fluid">
+    <div class="row">
+      
+      <div class="col-md-12">
+
+          <div class="panel panel-default">
+              <div class="panel-body">
+                <h2>Sentiment Analysis of Reviews</h2>
+                <hr>
+                <div id="plot2"></div>
+                <script src="static/js/sentiment_plot.js"></script>
+                <script src="static/js/sentiment.js"></script>
+                <br>
+                
+                <p> The taster sentiment analysis on rating shows that a higher rating tends to get a more positive review description. 
+                  The analyzer was used on each description of the wine and compound score retrieved from data. It is 
+                  
+                </p>
+              </div>
+            </div>
+
+      </div>
+      <div class="col-md-12">
+
+          <div class="panel panel-default">
+              <div class="panel-body">
+                  
+                <h2>Sentiment Analysis of Reviews</h2>
+                <hr>
+                <div id="plot"></div>
+                <script src="static/js/sentiment.js"></script>
+                <script src="static/js/sentiment_plot.js"></script>
+                <br>
+                <p> The taster sentiment analysis on price does not show much of a correlation between higher prices and positive review description 
+                    </p>
+            
+            </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="col-md-12">
+  
+            <div class="panel panel-default">
+                <div class="panel-body">
+                  <h2>Taster Bias</h2>
+                  <hr>
+                  <div id="plot3"></div>
+                  <script src="static/js/sentiment_plot.js"></script>
+                  <script src="static/js/useraverages.js"></script>
+                  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                  <br>
+                  
+                  <p> This analysis was to determine taster bias for price or rating. Shows that some users were 
+                  
+                  </p>
+                </div>
+              </div>
+  
+        </div>
+        <div class="col-md-12">
+  
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    
+                  <h2>Taster Bias</h2>
+                  <hr>
+                  <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                  <script src="static/js/bartwoaxis.js"></script>
+                  <script src="static/js/useraverages.js"></script>
+                  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                  <script src="static/js/sentiment_plot.js"></script>
+                  <br>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+              </div> 
+        </div>
+      </div>
+    <div class="col-md-1"></div>
+
+  </div>
+</div>
+</body>
+</html>

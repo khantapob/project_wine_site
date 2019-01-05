@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Wine Analysis</title>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <script src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
+ <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  crossorigin=""></script>
+
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+<body style="background-color: rgb(102, 22, 22)">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <a class="navbar-brand" href="index.html" style="color: white; background-color:rgb(102, 22, 22)">
+            <i class="glyphicon glyphicon-home"></i>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="plot.html">Price by Country</a></li>
+            <li><a href="plot2.html">Price vs Rating</a></li>
+          </ul>
+      </li>
+      <li><a href="taster.html">Taster Analysis</a></li>
+      <li><a href="wineproduction.html">Wine Production</a></li>
+      <li><a href="data.html">Data</a></li>
+      
+    </ul>
+
+</div>
+</div>
+</nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-7">
+
+          <div class="panel panel-default">
+              <div class="panel-body">
+                <h2>Wine Production by Country 2017</h2>
+                <hr>
+                <div id="map-holder">
+                    <div class="container fill">
+                      <div id="map"></div>
+                    </div>
+                  </div>
+                <!-- <img class = "img-responsive" src="assets/wineprod.png" style="width:100%; float: left; margin: 5px;" alt="first image" > -->
+                <br>
+                
+                <p>In the European Union (EU), extreme weather events – from frost to drought – significantly
+                    impacted 2017 wine production, which was historically low. Indeed, the forecasts of the three
+                    main producing countries saw a decrease compared with 2016 production.
+                    <br>
+                    <br>
+                    Italy confirmed its place as the leading world producer for the third year running in 2017, followed by France, and then Spain.
+                </p>
+              </div>
+            </div>
+
+      </div>
+      <div class="col-md-4">
+
+          <div class="panel panel-default">
+              <div class="panel-body">
+                  
+                <h3>Top 5 Wine Production Countries</h3>
+                <hr>
+                <p> * Production volumes are in millions of hectoliters (mhl) (1 hectoliter = 26.4 gallons)
+                </p>
+                <hr>
+                <div class="row" style = "padding-bottom: 10px">
+                    <p><img src="assets/italy.png" alt="Italy" width="42" height="42" align="middle"> Italy - 42.5 mhl</p>
+                    <hr>
+                    <p><img src="assets/france.png" alt="France" width="42" height="42" align="middle"> France - 36.6 mhl</p>
+                    <hr>
+                    <p><img src="assets/spain.png" alt="France" width="42" height="42" align="middle"> Spain - 32.5 mhl</p>
+                    <hr>
+                    <p><img src="assets/usa.png" alt="USA" width="42" height="42" align="middle"> United States - 23.3 mhl</p>
+                    <hr>
+                    <p><img src="assets/australia.png" alt="Australia" width="42" height="42" align="middle"> Australia - 13.7 mhl</p>
+                </div>
+            
+            </div>
+
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+
+  </div>
+</div>
+
+<!-- <div id="map-holder">
+    <div class="container fill">
+      <div id="map"></div>
+    </div>
+  </div> -->
+
+<!-- <div id="map"></div> -->
+<!-- API key -->
+<script type="text/javascript" src="static/js/config.js"></script>
+<!-- Our JS -->
+<script type="text/javascript" src="static/js/logic_wineproduction.js"></script>
+
+
+
+</body>
+</html>

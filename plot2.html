@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Wine Analysis</title>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <script src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
+ <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+<body style="background-color: rgb(102, 22, 22)">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <a class="navbar-brand" href="index.html" style="color: white; background-color:rgb(102, 22, 22)">
+            <i class="glyphicon glyphicon-home"></i>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="plot.html">Price by Country</a></li>
+          <li><a href="plot2.html">Price vs Rating</a></li>
+        </ul>
+      </li>
+      <li><a href="taster.html">Taster Analysis</a></li>
+      <li><a href="wineproduction.html">Wine Production</a></li>
+      <li><a href="data.html">Data</a></li>
+      
+    </ul>
+
+</div>
+</div>
+</nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2"></div>
+
+      <div class="col-md-8">
+
+          <div class="panel panel-default">
+              <div class="panel-body">
+                <h2>Price vs Rating</h2>
+                <hr>
+                
+                <div id="plot"></div>
+                <script src="static/js/price_data.js"></script>
+                <script src="static/js/price_plot.js"></script>
+
+                <h2>Best and Worst values</h2>
+                <p>All values are selected from the 23k row dataset normalized by production.<ul>
+                  <li><b>Best values:</b> Price below $20 and score over 90: 185 results</li>
+                  <li><b>Worst values:</b> Price over $40 and score below 85: 75 results</li>
+                </ul></p>
+
+                <div id="best_worst_plot"></div>
+                <script src="data/best_worst_values.js"></script>
+                <script src="static/js/best_worst_values_by_country.js"></script>
+                
+
+              </div>
+            </div>
+
+      </div>
+    
+    <div class="col-md-2"></div>
+
+  </div>
+</div>
+</body>
+</html>
